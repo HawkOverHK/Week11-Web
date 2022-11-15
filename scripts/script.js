@@ -25,7 +25,14 @@ let r = prompt("Enter a Radius");
 console.log(r)
 function circleArea (radius)
 {
+    let radiusP = document.querySelector("#radius");
+    // console.log(radiusP)
+    let resultP = document.querySelector("#result");
+    // console.log(resultP)
+    radiusP.textContent =radius;
     return Math.PI * radius * radius;
+    resultP.textContent = calculatedArea
+    return calculatedArea;
 }
 let area = circleArea(r).toFixed(2);
 alert(`The Area is ${area}`)
