@@ -15,9 +15,17 @@
 //     console.log(`KONO ${user} DA WRRYYYYYYYYYYYY. MUDA MUDA`);
 // }
 // greet("DIO")
-function greet(user, time = "day")
+// function greet(user, time = "day")
+// {
+//     console.log(`Good ${time} ${user}`);
+// }
+// greet("JoJo")
+// greet("JoJo", "night")
+let r = prompt("Enter a Radius");
+console.log(r)
+function circleArea (radius)
 {
-    console.log(`Good ${time} ${user}`);
+    return Math.PI * radius * radius;
 }
-greet("JoJo")
-greet("JoJo", "night")
+let area = circleArea(r).toFixed(2);
+alert(`The Area is ${area}`)
