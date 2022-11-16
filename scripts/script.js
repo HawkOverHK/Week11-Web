@@ -21,18 +21,39 @@
 // }
 // greet("JoJo")
 // greet("JoJo", "night")
-let r = prompt("Enter a Radius");
-console.log(r)
-function circleArea (radius)
+// let r = prompt("Enter a Radius");
+// console.log(r)
+// function circleArea (radius)
+// {
+//     let radiusP = document.querySelector("#radius");
+//     // console.log(radiusP)
+//     let resultP = document.querySelector("#result");
+//     // console.log(resultP)
+//     radiusP.textContent =radius;
+//     return Math.PI * radius * radius;
+//     resultP.textContent = calculatedArea
+//     return calculatedArea;
+// }
+// let area = circleArea(r).toFixed(2);
+// alert(`The Area is ${area}`)
+const unorderedList = document.querySelector(".shopping");
+// console.log(unorderedList)
+function populateList(list)
 {
-    let radiusP = document.querySelector("#radius");
-    // console.log(radiusP)
-    let resultP = document.querySelector("#result");
-    // console.log(resultP)
-    radiusP.textContent =radius;
-    return Math.PI * radius * radius;
-    resultP.textContent = calculatedArea
-    return calculatedArea;
+    for (let i = 0; i < list.length; i++)
+    {
+        let listItem = document.createElement("li");
+        listItem.textContent = list[i] 
+        // console.log(list[i])
+        unorderedList.appendChild(listItem)
+    }
 }
-let area = circleArea(r).toFixed(2);
-alert(`The Area is ${area}`)
+const shoppingList = ["cheese", "bread", "green pepper"];
+populateList(shoppingList);
+
+function changeListStyle()
+{
+ unorderedList.classList.remove("circleList");
+ unorderedList.classList.add("squareList");
+}
+changeListStyle()
